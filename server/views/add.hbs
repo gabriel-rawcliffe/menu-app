@@ -10,13 +10,24 @@
   </label>
   
   <fieldset>
-  <label for="ingredient" class="form-item">
-    Ingredients:
-    <div id="ingredient-input">
-    <input type="text" name="ingredient[]" value="" required>
+    <div id="ingredient-amount">
+    <div id="ingredients">
+      <label for="ingredient" class="form-item">
+        Ingredient(s):
+        <div id="ingredient-input">
+          <input type="text" name="ingredient[]" value="" required>
+        </div>
+      </label>
     </div>
-    <button type="button" id="add-ingredient">Add ingredient</button>
-  </label>
+
+    <div id="amount">
+      <label for="amount"> Amount:
+        <div id=amount-input>
+          <input type="text" name="amount[]" value="">
+        </div>
+      </label>
+    </div>
+  </div>
   </fieldset>
   
   <label for="instructions" class="form-item">
