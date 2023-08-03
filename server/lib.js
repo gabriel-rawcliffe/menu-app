@@ -22,3 +22,17 @@ export async function writeRecipes(data) {
     console.error(err.message)
   }
 }
+
+// Form button
+const addIngredientButton = document.getElementById('add-ingredient')
+const ingredientInputContainer = document.getElementById('ingredient-input')
+
+function addIngredientInput() {
+  const newInput = document.createElement('input')
+  newInput.setAttribute('type', 'text')
+  newInput.setAttribute('name', 'ingredient[]')
+  newInput.setAttribute('value', '')
+  ingredientInputContainer.appendChild(newInput)
+}
+
+addIngredientButton.addEventListener('click', addIngredientInput)
