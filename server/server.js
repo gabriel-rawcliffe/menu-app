@@ -19,14 +19,20 @@ server.set('view engine', 'hbs')
 server.set('views', Path.resolve('server/views'))
 
 // Your routes/router(s) should go here
-const recipesobj= await lib.readRecipes()
-const recipes = recipesobj.recipes
+
 // add get route for home
-server.get('/', (req, res) => {
-  res.render('home', {recipes,})
+server.get('/', async (req, res) => {
+  const recipesobj = await lib.readRecipes()
+  const recipes = recipesobj.recipes
+  res.render('home', { recipes })
 })
 
 // add get route for individual recipes
+
+server.get('/recipes/:id', async (req, res) => {
+  const recipe = await lib.getRecipeById(Number(req.params.id))
+  res.render('details', recipe)
+})
 
 // add post route for new recipes
 

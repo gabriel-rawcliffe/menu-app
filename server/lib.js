@@ -23,30 +23,14 @@ export async function writeRecipes(data) {
   }
 }
 
-// Form add ingredients button
-const addIngredientButton = document.getElementById('add-ingredient')
-const ingredientInputContainer = document.getElementById('ingredient-input')
-const amountInputContainer = document.getElementById('amount-input')
+export async function getRecipeById(id) {
+  const recipesData = await readRecipes()
+  const details = recipesData.recipes.find((recipe) => recipe.id === id)
+  if (!details) {
+    const error = new Error('Recipe not found')
+    error.code = 404
+    throw error
+  }
 
-function addIngredientInput() {
-  const newInput = document.createElement('input')
-  newInput.setAttribute('type', 'text')
-  newInput.setAttribute('name', 'ingredient[]')
-  newInput.setAttribute('value', '')
-  ingredientInputContainer.appendChild(newInput)
+  return details
 }
-
-function addAmountInput() {
-  const newInput = document.createElement('input')
-  newInput.setAttribute('type', 'text')
-  newInput.setAttribute('name', 'amount[]')
-  newInput.setAttribute('value', '')
-  amountInputContainer.appendChild(newInput)
-}
-
-function combineTwo() {
-  addIngredientInput()
-  addAmountInput()
-}
-
-addIngredientButton.addEventListener('click', combineTwo)
