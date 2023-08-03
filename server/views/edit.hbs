@@ -14,7 +14,9 @@
   <fieldset>
   <label for="ingredient" class="form-item">
     Ingredients:
-    <input type="text" name="ingredient" value="{{ingredient}}">
+    {{#each}}
+    <input type="text" name="ingredient[{{@index}}]" value="{{this}}">
+    {{/each}}
   </label>
   </fieldset>
   
