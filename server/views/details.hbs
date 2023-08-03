@@ -1,7 +1,23 @@
 <div class="puppy">
   <img class="img-circle" src="{{image}}" alt="{{name}}">
   <h2>{{name}}</h2>
-  <div>Breed: {{breed}}</div>
-  <div>Owner: {{owner}}</div>
+  <div>Author: {{author}}</div>
+  <div>
+    <p>Ingredients: </p>
+    <ul>
+      {{#each ingredients}}
+        {{>ingredient}}
+      {{/each}}
+    </ul>
+  </div>
+  <div>
+    <p>Instructions:</p>
+    <ol>
+      {{!-- Assumes instructions becomes an array and not a string --}}
+      {{#each instructions}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ol>
+  </div>
   <a href="/puppies/{{id}}/edit">Edit</a>
 </div>

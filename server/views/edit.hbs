@@ -1,3 +1,4 @@
+{{!-- This method should be put and not post? --}}
 <form class="form" action="/puppies/{{id}}/edit" method="post">
   <img class="img-circle" src="{{image}}" alt="{{name}}">
   <label for="name" class="form-item">
@@ -5,16 +6,25 @@
     <input type="text" name="name" value="{{name}}">
   </label>
   
-  <label for="breed" class="form-item">
-    Breed:
-    <input type="text" name="breed" value="{{breed}}">
+  <label for="author" class="form-item">
+    Author:
+    <input type="text" name="author" value="{{author}}">
   </label>
   
-  <label for="owner" class="form-item">
-    Owner:
-    <input type="text" name="owner" value="{{owner}}">
+  <fieldset>
+  <label for="ingredient" class="form-item">
+    Ingredients:
+    <input type="text" name="ingredient" value="{{ingredient}}">
   </label>
+  </fieldset>
   
+<fieldset>  
+    <label for="instructions" class="form-item">
+    Instructions:
+    <input type="text" name="instructions" value="{{instructions}}">
+  </label>
+</fieldset>
+
   <input type="hidden" name="image" value="{{image}}">
   
   <input type="submit" name="" value="Submit">
