@@ -19,5 +19,17 @@ server.set('view engine', 'hbs')
 server.set('views', Path.resolve('server/views'))
 
 // Your routes/router(s) should go here
+const recipesobj= await lib.readRecipes()
+const recipes = recipesobj.recipes
+// add get route for home
+server.get('/', (req, res) => {
+  res.render('home', {recipes,})
+})
+
+// add get route for individual recipes
+
+// add post route for new recipes
+
+// add post route for edits
 
 export default server
