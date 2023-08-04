@@ -1,12 +1,13 @@
+{{>returnHome}}
 <form class="form" action="#" method="post">
   <label for="name" class="form-item">
     Name:
-    <input type="text" name="name" value="" required>
+    <input type="text" name="name" value="">
   </label>
   
   <label for="author" class="form-item">
     Author:
-    <input type="text" name="author" value="" required>
+    <input type="text" name="author" value="">
   </label>
   
   <fieldset>
@@ -15,7 +16,7 @@
       <label for="ingredient" class="form-item">
         Ingredient(s):
         <div id="ingredient-input">
-          <input type="text" name="ingredient[]" value="" required>
+          <input type="text" name="ingredient[]" value="">
         </div>
       </label>
     </div>
@@ -29,17 +30,21 @@
       </label>
     </div>
   </div>
+
   </fieldset>
-  
+  <button id="add-ingredient" type="button">Add ingredient</button>
+
   <label for="instructions" class="form-item">
     Instructions:
-    <input type="text" name="instructions" value="" required>
+    <input type="text" name="instructions" value="">
   </label>
 
 <label for="image">
-  Please choose an image:
-  <input type="file" name="image" accept="image/png, image/jpeg">
+  Please enter a URL to an image:
+  <input type="type" name="image">
 </label>
 
   <input type="submit" name="" value="Submit">
 </form>
+<script src="form.js">
+</script>
