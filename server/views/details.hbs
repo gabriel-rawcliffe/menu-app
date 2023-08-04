@@ -1,4 +1,5 @@
 <div class="puppy">
+  {{>returnHome}}
   <img class="img-circle" src="{{image}}" alt="{{name}}">
   <h2>{{name}}</h2>
   <div>Author: {{author}}</div>
@@ -6,7 +7,7 @@
     <p>Ingredients: </p>
     <ul>
       {{#each ingredients}}
-        {{>ingredient}}
+        <li>{{ingredient}} -- {{amount}}</li>
       {{/each}}
     </ul>
   </div>
@@ -14,5 +15,9 @@
     <p>Instructions:</p>
     <p>{{instructions}}</p>
   </div>
+<<<<<<< HEAD
   <a href='/edit-recipe/{{id}}'>Edit</a>
+=======
+  <a href="/recipes/{{id}}/edit" class="link">Edit</a>
+>>>>>>> d71e7099dbde4d3f7cfabe219ae1cec7d621aa34
 </div>
