@@ -4,6 +4,12 @@
       "id": 1,
       "name": "World's best carrot cake",
       "author": "Gabriel",
+      "ingredients":[
+        {
+          "ingredient": "food",
+          "amount": "some" 
+        }
+      ],
       "image": "/images/carrot-cake.jpg",
       "instructions": "Mix the leaves."
     },
@@ -11,6 +17,12 @@
       "id": 2,
       "name": "hdv",
       "author": "dfsgsh",
+      "ingredients":[
+        {
+          "ingredient": "chocolate",
+          "amount": "lots" 
+        }
+      ],
       "image": "https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "instructions": "sdghsdh"
     },
@@ -18,6 +30,12 @@
       "id": 3,
       "name": "Test",
       "author": "Nathalia",
+      "ingredients":[
+        {
+          "ingredient": "food",
+          "amount": "some" 
+        }
+      ],
       "image": "https://images.pexels.com/photos/920220/pexels-photo-920220.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "instructions": "Test"
     },
@@ -25,6 +43,12 @@
       "id": 4,
       "name": "Pizza",
       "author": "Bob the builder",
+      "ingredients":[
+        {
+          "ingredient": "food",
+          "amount": "some" 
+        }
+      ],
       "image": "https://images.pexels.com/photos/2762942/pexels-photo-2762942.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "instructions": "Make pizza. Cook pizza. Eat pizza"
     }
