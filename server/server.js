@@ -34,7 +34,30 @@ server.get('/recipes/:id', async (req, res) => {
   res.render('details', recipe)
 })
 
+// add get route for add recipe page
+server.get('/add-recipe', (req, res) => {
+  res.render('add')
+})
+
 // add post route for new recipes
+server.post('/add-recipe', async (req, res) => {
+  const data = await lib.readRecipes()
+
+  const newRecipe = {
+    id: data.recipes.length + 1,
+    name: req.body.name,
+    author: req.body.author,
+    image: req.body.image,
+    ingredients: req.body.ingredients,
+    instructions: req.body.instructions,
+  }
+
+  data.recipes.push(newRecipe)
+
+  await lib.writeRecipes(data)
+
+  res.redirect('/')
+})
 
 // add post route for edits
 
