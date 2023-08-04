@@ -34,3 +34,23 @@ export async function getRecipeById(id) {
 
   return details
 }
+
+export async function editRecipe(recipe) {
+  const recipeData = await readRecipes()
+  const found = recipeData.recipes.find((entry) => entry.id === recipe.id)
+  if (!found) {
+    const error = new Error('Recipe not found')
+    error.code = 404
+    throw error
+  }
+
+  //Update the recipe
+  found.id = recipe.id
+  found.name = recipe.name
+  found.author = recipe.author
+  found.image = recipe.image
+  found.ingredients = recipe.ingredients
+  found.instructions = recipe.instructions
+
+  await writeRecipes(recipeData)
+}

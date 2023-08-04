@@ -66,4 +66,19 @@ server.get('/edit-recipe/:id', async (req, res) => {
   res.render('edit', id)
 })
 
+server.post('/edit-recipe/:id', async (req, res) => {
+  const id = Number(req.params.id)
+  const editedRecipe = {
+    id: id,
+    name: req.body.name,
+    author: req.body.author,
+    image: req.body.image,
+    ingredients: req.body.ingredients,
+    instructions: req.body.instructions,
+  }
+
+  await lib.editRecipe(editedRecipe)
+  res.redirect('/recipes/' + id)
+})
+
 export default server

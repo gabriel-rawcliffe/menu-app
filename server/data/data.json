@@ -5,17 +5,7 @@
       "name": "World's best carrot cake",
       "author": "Gabriel",
       "image": "/images/carrot-cake.jpg",
-      "ingredients": [
-        {
-          "ingredient": "carrots",
-          "amount": "3 cups"
-        },
-        {
-          "ingredient": "cake",
-          "amount": "1"
-        }
-      ],
-      "instructions": "Grate the carrots. Mix the carrots and the cake together. Bake at 180degC for 40 min"
+      "instructions": "Mix the leaves."
     },
     {
       "id": 2,
@@ -30,6 +20,20 @@
       "author": "Nathalia",
       "image": "",
       "instructions": "Test"
+    },
+    {
+      "id": 4,
+      "name": "Katie",
+      "author": "Kt",
+      "image": "https://www.google.com/search?sca_esv=553641319&sxsrf=AB5stBhiAXD_76C_o4DRq4FxVL-cUmbt1Q:1691116780429&q=flower&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjigOL3_MGAAxVBTWwGHQv3DJwQ0pQJegQICxAB&biw=1920&bih=923&dpr=1#imgrc=2Jd8iFsFZgWYHM",
+      "instructions": "Stir the pot"
+    },
+    {
+      "id": 5,
+      "name": "Katie",
+      "author": "Kt",
+      "image": "https://unsplash.com/s/photos/orange-flower",
+      "instructions": "Stir the pot"
     }
   ]
 }
