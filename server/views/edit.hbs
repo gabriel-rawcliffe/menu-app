@@ -1,4 +1,3 @@
-{{!-- This method should be put and not post? --}}
 <form class="form" action="/puppies/{{id}}/edit" method="post">
   <img class="img-circle" src="{{image}}" alt="{{name}}">
   <label for="name" class="form-item">
@@ -12,12 +11,29 @@
   </label>
   
   <fieldset>
-  <label for="ingredient" class="form-item">
-    Ingredients:
-    {{#each}}
-    <input type="text" name="ingredient[]" value="{{this}}">
-    {{/each}}
-  </label>
+    <div id="ingredient-amount">
+    <div id="ingredients">
+      <label for="ingredient" class="form-item">
+        Ingredient(s):
+        <div id="ingredient-input">
+          {{#each ingredients}}
+            <input type="text" name="ingredient[]" value="{{this.ingredient}}" required>
+          {{/each}}
+        </div>
+      </label>
+    </div>
+
+    <div id="amount">
+      <label for="amount" class="form-item"> 
+        Amount:
+        <div id=amount-input>
+          {{#each ingredients}}
+            <input type="text" name="amount[]" value="{{this.amount}}">
+          {{/each}}
+        </div>
+      </label>
+    </div>
+  </div>
   </fieldset>
   
 
