@@ -15,6 +15,7 @@ button {
 
 input {
   margin-block-end: 5px;
+  padding-block: 5px;
 }
 
 .link {

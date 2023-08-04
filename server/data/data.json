@@ -21,15 +21,22 @@
       "id": 2,
       "name": "hdv",
       "author": "dfsgsh",
-      "image": "",
+      "image": "https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "instructions": "sdghsdh"
     },
     {
       "id": 3,
       "name": "Test",
       "author": "Nathalia",
-      "image": "",
+      "image": "https://images.pexels.com/photos/920220/pexels-photo-920220.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "instructions": "Test"
+    },
+    {
+      "id": 4,
+      "name": "Pizza",
+      "author": "Bob the builder",
+      "image": "https://images.pexels.com/photos/2762942/pexels-photo-2762942.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "instructions": "Make pizza. Cook pizza. Eat pizza"
     }
   ]
 }
