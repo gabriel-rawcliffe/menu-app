@@ -61,4 +61,9 @@ server.post('/add-recipe', async (req, res) => {
 
 // add post route for edits
 
+server.get('/edit-recipe/:id', async (req, res) => {
+  const id = await lib.getRecipeById(Number(req.params.id))
+  res.render('edit', id)
+})
+
 export default server
