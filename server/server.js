@@ -12,7 +12,7 @@ const server = express()
 const publicFolder = Path.resolve('public')
 server.use(express.static(publicFolder))
 server.use(express.urlencoded({ extended: false }))
-
+server.use(express.json())
 // Handlebars configuration
 server.engine('hbs', hbs.engine({ extname: 'hbs' }))
 server.set('view engine', 'hbs')
@@ -41,22 +41,27 @@ server.get('/add-recipe', (req, res) => {
 
 // add post route for new recipes
 server.post('/add-recipe', async (req, res) => {
-  const data = await lib.readRecipes()
+  try {
+    const data = await lib.readRecipes()
 
-  const newRecipe = {
-    id: data.recipes.length + 1,
-    name: req.body.name,
-    author: req.body.author,
-    image: req.body.image,
-    ingredients: req.body.ingredients,
-    instructions: req.body.instructions,
+    const newRecipe = {
+      id: data.recipes.length + 1,
+      name: req.body.name,
+      author: req.body.author,
+      image: req.body.image,
+      ingredients: req.body.ingredients,
+      instructions: req.body.instructions,
+    }
+
+    data.recipes.push(newRecipe)
+
+    await lib.writeRecipes(data)
+
+    res.redirect('/')
+  } catch (error) {
+    console.error(error.message)
+    res.status(500).send('Internal Server Error')
   }
-
-  data.recipes.push(newRecipe)
-
-  await lib.writeRecipes(data)
-
-  res.redirect('/')
 })
 
 // add post route for edits

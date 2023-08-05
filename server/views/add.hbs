@@ -1,7 +1,7 @@
 {{>returnHome}}
-<form class="form" action="#" method="post">
+<form class="form" action="/add-recipe" method="post" id="recipeForm">
   <label for="name" class="form-item">
-    Name:
+    Recipe:
     <input type="text" name="name" value="">
   </label>
   
@@ -9,8 +9,20 @@
     Author:
     <input type="text" name="author" value="">
   </label>
-  
+
   <fieldset>
+    <legend>Ingredients:</legend>
+    <div id="ingredient-amount" class="ingredient-inputs">
+      <label for="ingredient1" class="form-item">
+        Ingredient 1:
+        <input type="text" name="ingredients[0].ingredient" value="" required>
+        Amount:
+        <input type="text" name="ingredients[0].amount" value="" required>
+      </label>
+    </div>
+    <button type="button" id="add-ingredient">Add Ingredient</button>
+  </fieldset>
+  {{!-- <fieldset>
     <div id="ingredient-amount">
     <div id="ingredients">
       <label for="ingredient" class="form-item">
@@ -32,7 +44,7 @@
   </div>
 
   </fieldset>
-  <button id="add-ingredient" type="button">Add ingredient</button>
+  <button id="add-ingredient" type="button">Add ingredient</button> --}}
 
   <label for="instructions" class="form-item">
     Instructions:
@@ -44,7 +56,7 @@
   <input type="type" name="image">
 </label>
 
-  <input type="submit" name="" value="Submit">
+  <input type="submit" value="Submit">
 </form>
 <script src="form.js">
 </script>

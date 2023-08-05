@@ -4,10 +4,10 @@
       "id": 1,
       "name": "World's best carrot cake",
       "author": "Gabriel",
-      "ingredients":[
+      "ingredients": [
         {
           "ingredient": "food",
-          "amount": "some" 
+          "amount": "some"
         }
       ],
       "image": "/images/carrot-cake.jpg",
@@ -17,10 +17,10 @@
       "id": 2,
       "name": "hdv",
       "author": "dfsgsh",
-      "ingredients":[
+      "ingredients": [
         {
           "ingredient": "chocolate",
-          "amount": "lots" 
+          "amount": "lots"
         }
       ],
       "image": "https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=1600",
@@ -30,10 +30,10 @@
       "id": 3,
       "name": "Test",
       "author": "Nathalia",
-      "ingredients":[
+      "ingredients": [
         {
           "ingredient": "food",
-          "amount": "some" 
+          "amount": "some"
         }
       ],
       "image": "https://images.pexels.com/photos/920220/pexels-photo-920220.jpeg?auto=compress&cs=tinysrgb&w=1600",
@@ -43,14 +43,70 @@
       "id": 4,
       "name": "Pizza",
       "author": "Bob the builder",
-      "ingredients":[
+      "ingredients": [
         {
           "ingredient": "food",
-          "amount": "some" 
+          "amount": "some"
         }
       ],
       "image": "https://images.pexels.com/photos/2762942/pexels-photo-2762942.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "instructions": "Make pizza. Cook pizza. Eat pizza"
+    },
+    {
+      "id": 5,
+      "name": "Testing",
+      "author": "Testing",
+      "image": "awrgawrg",
+      "ingredients": [
+        {
+          "ingredient": "TRY",
+          "amount": "Hard"
+        }
+      ],
+      "instructions": "WHAT YOU DOING"
+    },
+    {
+      "id": 6,
+      "name": "gr",
+      "author": "rg",
+      "image": "rg",
+      "ingredients": [
+        {
+          "ingredient": "f",
+          "amount": "gr"
+        }
+      ],
+      "instructions": "rg"
+    },
+    {
+      "id": 7,
+      "name": "fgrg",
+      "author": "rgregerg",
+      "image": "rgergerg",
+      "ingredients": [
+        {
+          "ingredient": "fergerg",
+          "amount": "grergerg"
+        }
+      ],
+      "instructions": "rgergerg"
+    },
+    {
+      "id": 8,
+      "name": "hhrr",
+      "author": "ggr4",
+      "image": "ehehe",
+      "ingredients": [
+        {
+          "ingredient": "gsrgrg4g",
+          "amount": "fggsggs"
+        },
+        {
+          "ingredient": "ergerg",
+          "amount": "rgrgeg"
+        }
+      ],
+      "instructions": "eregerh"
     }
   ]
 }
