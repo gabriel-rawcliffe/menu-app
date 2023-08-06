@@ -18,6 +18,27 @@ addIngredientButton.addEventListener('click', () => {
   ingredientCounter++
 })
 
+// instructions add button
+
+const addInstructionButton = document.getElementById('add-instruction')
+const instructionInputs = document.getElementById('instruct')
+console.log(instructionInputs)
+let instructionCounter = 1
+
+addInstructionButton.addEventListener('click', () => {
+  console.log('clicked')
+  const newInstructionInput = document.createElement('div')
+  newInstructionInput.innerHTML = `
+    <label for="instruction${instructionCounter + 1}" class="form-item">
+      Step ${instructionCounter + 1}:
+      <input type="text" name="instructions[${instructionCounter}]" value="">
+    </label>
+  `
+  instructionInputs.appendChild(newInstructionInput)
+  instructionCounter++
+})
+
+// Add array elements for instructions and ingredients
 const recipeForm = document.getElementById('recipeForm')
 recipeForm.addEventListener('submit', async (event) => {
   event.preventDefault()
@@ -30,6 +51,10 @@ recipeForm.addEventListener('submit', async (event) => {
       if (!data.ingredients) data.ingredients = []
       if (!data.ingredients[index]) data.ingredients[index] = {}
       data.ingredients[index][property] = value
+    } else if (key.includes('instructions')) {
+      const index = key.match(/\[(\d+)\]/)[1]
+      if (!data.instructions) data.instructions = []
+      data.instructions[index] = value
     } else {
       data[key] = value
     }
@@ -54,29 +79,3 @@ recipeForm.addEventListener('submit', async (event) => {
     console.error(error.message)
   }
 })
-// const addIngredientButton = document.getElementById('add-ingredient')
-// const ingredientInputContainer = document.getElementById('ingredient-input')
-// const amountInputContainer = document.getElementById('amount-input')
-
-// function addIngredientInput() {
-//   const newInput = document.createElement('input')
-//   newInput.setAttribute('type', 'text')
-//   newInput.setAttribute('name', 'ingredient[]')
-//   newInput.setAttribute('value', '')
-//   ingredientInputContainer.appendChild(newInput)
-// }
-
-// function addAmountInput() {
-//   const newInput = document.createElement('input')
-//   newInput.setAttribute('type', 'text')
-//   newInput.setAttribute('name', 'amount[]')
-//   newInput.setAttribute('value', '')
-//   amountInputContainer.appendChild(newInput)
-// }
-
-// function combineTwo() {
-//   addIngredientInput()
-//   addAmountInput()
-// }
-
-// addIngredientButton.addEventListener('click', combineTwo)
