@@ -11,7 +11,9 @@
         }
       ],
       "image": "/images/carrot-cake.jpg",
-      "instructions": "Mix the leaves."
+      "instructions": [
+        "Mix ingredients", "Bake", "Eat"
+      ]
     },
     {
       "id": 2,

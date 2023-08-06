@@ -97,3 +97,11 @@ input {
   flex-direction: row;
   gap: 1rem;
 }
+
+#instructions {
+  padding-bottom: 15px;
+}
+
+#instructions li {
+  list-style-type: decimal;
+}

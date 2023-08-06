@@ -13,7 +13,11 @@
   </div>
   <div>
     <p>Instructions:</p>
-    <p>{{instructions}}</p>
+    <ol id="instructions">
+    {{#each instructions}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ol>
   </div>
   <a href='/edit-recipe/{{id}}' class="link">Edit</a>
 </div>
